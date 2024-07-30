@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.0.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Architecht.Autofac.Aspect.Core\Architecht.Autofac.Aspect.Core.csproj" />
+    <ProjectReference Include="..\Architect.Autofac.Notification.Infra.Core\Architect.Autofac.Notification.Infra.Core.csproj" />
+    <ProjectReference Include="..\Architect.BOA.BLL\Architect.BOA.BLL.csproj" />
+  </ItemGroup>
+
+</Project>
