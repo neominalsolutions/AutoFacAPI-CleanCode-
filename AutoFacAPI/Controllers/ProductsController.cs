@@ -31,6 +31,22 @@ namespace AutoFacAPI.Controllers
       return Ok();
     }
 
+    [HttpPut]
+    public IActionResult Update([FromBody] Product model)
+    {
+      _productService.UpdateProduct(model);
+
+      return Ok();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Delete(int id)
+    {
+      _productService.DeleteProduct(id);
+
+      return Ok();
+    }
+
 
   }
 }

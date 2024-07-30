@@ -4,7 +4,7 @@ using Architect.BOA.BLL;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Autofac.Extras.DynamicProxy;
-
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +31,9 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).Conf
   //builder.RegisterType<ProductService>().As<IProductService>().AsImplementedInterfaces().EnableInterfaceInterceptors().InterceptedBy(typeof(LogAspect),typeof(PerformanceAspect));
 
 });
+
+// Mediatora ait ne kadar Request Handler ne kadar Request tipi varsa hepsini uygulama register et. 
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 var app = builder.Build();
 
