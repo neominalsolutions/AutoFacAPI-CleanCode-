@@ -14,6 +14,9 @@ namespace AutoFacAPI.Features.Product.Handlers
 
     public Task Handle(CreateProductDto request, CancellationToken cancellationToken)
     {
+
+      //request.Price = 15; class olduğu için mutuable tanımlandı bu durumda developer tarafında değeri değiştirilebildi.
+
       // veri tabanı kayıt yada bussiness logic layerdaki servis çağırıları burada gerçekleşebilir.
       // uygulama içerisinde gelen create isteklerini işlediğimiz yer.
       _logger.LogInformation("Ürün Kayıt işlemi");

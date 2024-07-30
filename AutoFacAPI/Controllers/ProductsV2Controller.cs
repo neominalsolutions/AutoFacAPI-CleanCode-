@@ -25,6 +25,14 @@ namespace AutoFacAPI.Controllers
       return Created("/api/productsV2/1",request); // 201 Post istekleri eğer yeni bir kaynak oluşturuyor statusCode 201 olarak döndürmemiz lazım
     }
 
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateProductDto request)
+    {
+      await _mediator.Send(request);
+
+      return NoContent(); // 204 
+    }
+
 
   }
 }

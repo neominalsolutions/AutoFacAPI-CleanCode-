@@ -4,6 +4,8 @@ using Architect.BOA.BLL;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Autofac.Extras.DynamicProxy;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,6 +36,11 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).Conf
 
 // Mediatora ait ne kadar Request Handler ne kadar Request tipi varsa hepsini uygulama register et. 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
+// yeni versiyonda bütün validator nesnelerinin IoC yüklenmesi için kullandýk.
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+builder.Services.AddFluentValidationAutoValidation(); // Net Core API Validasyonlarý artýk bunun üzerindne çalýþtýrsýn ayarý, Hata varsa 400 kodu döndürüyor. hata yoksa kodumuz kaldýðý yerden devam ediyor. Bir method girmeden önce otomatik olarak validation kontrolü yapýyor. 
+
 
 var app = builder.Build();
 
