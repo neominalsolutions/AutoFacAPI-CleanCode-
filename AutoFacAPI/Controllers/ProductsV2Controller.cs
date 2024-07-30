@@ -1,4 +1,5 @@
 ﻿using AutoFacAPI.Features.Product.Dtos;
+using AutoFacAPI.Features.Product.Request;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,11 +27,21 @@ namespace AutoFacAPI.Controllers
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] UpdateProductDto request)
+    public async Task<IActionResult> Update(int id,[FromBody] UpdateProductDto dto)
     {
-      await _mediator.Send(request);
+     
+
+      await _mediator.Send(new UpdateProductRequest(id,dto.Name,dto.Price));
 
       return NoContent(); // 204 
+    }
+
+    [HttpPut("priceChange/{id}")]
+    public async Task<IActionResult> ProductPriceChange(int id, [FromBody] PriceChangeProductDto dto)
+    {
+      await _mediator.Send(new PriceChangeProductRequest(id,dto.newPrice));
+
+      return NoContent();
     }
 
 

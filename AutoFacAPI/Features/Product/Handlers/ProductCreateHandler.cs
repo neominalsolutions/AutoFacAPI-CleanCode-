@@ -1,4 +1,5 @@
-﻿using AutoFacAPI.Features.Product.Dtos;
+﻿
+using AutoFacAPI.Features.Product.Request;
 using MediatR;
 
 namespace AutoFacAPI.Features.Product.Handlers
