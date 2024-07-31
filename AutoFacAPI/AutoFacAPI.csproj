@@ -25,4 +25,8 @@
     <ProjectReference Include="..\Architect.BOA.BLL\Architect.BOA.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Docs\" />
+  </ItemGroup>
+
 </Project>
