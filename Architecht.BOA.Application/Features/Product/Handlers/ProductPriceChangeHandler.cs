@@ -1,34 +1,28 @@
 ﻿using Architecht.BOA.Application;
+using Architect.BOA.BLL.Services;
 using MediatR;
 
 namespace AutoFacAPI.Features.Product.Handlers
 {
   public class ProductPriceChangeHandler : IRequestHandler<PriceChangeProductRequest>
   {
-    private readonly IMediator _mediator;
-
-    public ProductPriceChangeHandler(IMediator mediator)
+    private readonly IProductPriceService _productPriceService;
+    // Application katman üzerin Domain layer tetiklediğimiz Katman
+    // Aynı zamanda Farklı katmanlarada burada bağlanıp süreci yönetebiliriz.
+    // Bu katmanda logic olmaz ilgili servisler sadece consume edilir.
+   
+    public ProductPriceChangeHandler(IProductPriceService productPriceService)
     {
-      _mediator = mediator;
+      _productPriceService = productPriceService;
     }
 
     public Task Handle(PriceChangeProductRequest request, CancellationToken cancellationToken)
     {
-      //// nesnenin veri tabanından bulunması
-      //var product = new Product { Id = request.Id, Name = "Ürün-1", Price = 10, Stock = 10 };
-      ////product.PriceChanged += Product_PriceChanged;
-      //product.PriceChange(request.newPrice); // Veri tabanından güncelleme kodu ve saire çalışacak:
-
-      //// Süreci Event Handler'a devrediyoruz.
-      //var @event = new ProductPriceChanged(product.Id, product.Price);
-      //await _mediator.Publish(@event); 
+      _productPriceService.UpdatePrice(request.Id, request.newPrice);
 
       return Task.CompletedTask;
     }
 
-    //private void Product_PriceChanged(object? sender, Architect.BOA.BLL.ProductPriceChangedArgs e)
-    //{
-    //  Console.WriteLine($"Ürünün fiyatı değişti : Eski Fiyat :{e.oldPrice}, Yeni Fiyat: {e.newPrice}");
-    //}
+ 
   }
 }

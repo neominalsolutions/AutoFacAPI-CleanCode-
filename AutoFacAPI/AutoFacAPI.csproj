@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Architecht.Autofac.Aspect.Core\Architecht.Autofac.Aspect.Core.csproj" />
     <ProjectReference Include="..\Architecht.BOA.Application\Architecht.BOA.Application.csproj" />
+    <ProjectReference Include="..\Architecht.BOA.EF.Infrastructure\Architecht.BOA.EF.Infrastructure.csproj" />
     <ProjectReference Include="..\Architect.Autofac.Notification.Infra.Core\Architect.Autofac.Notification.Infra.Core.csproj" />
     <ProjectReference Include="..\Architect.BOA.BLL\Architect.BOA.BLL.csproj" />
   </ItemGroup>

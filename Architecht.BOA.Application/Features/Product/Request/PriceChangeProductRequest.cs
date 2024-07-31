@@ -2,6 +2,6 @@
 
 namespace Architecht.BOA.Application
 {
-  public record PriceChangeProductRequest(int Id,decimal newPrice):IRequest;
+  public record PriceChangeProductRequest(Guid Id,decimal newPrice):IRequest;
   
 }

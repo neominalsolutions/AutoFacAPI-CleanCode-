@@ -12,10 +12,10 @@ namespace Architecht.BOA.EF.Infrastructure.Contexts
 {
   public class TestDbContext:DbContext
   {
-    //public TestDbContext(DbContextOptions<TestDbContext> opts):base(opts)
-    //{
+    public TestDbContext()
+    {
 
-    //}
+    }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseSqlServer("Server=DESKTOP-2V3N9MI\\SQLEXPRESS;Database=CleanCodeDB;Trusted_Connection=True; MultipleActiveResultSets=True;TrustServerCertificate=True;");

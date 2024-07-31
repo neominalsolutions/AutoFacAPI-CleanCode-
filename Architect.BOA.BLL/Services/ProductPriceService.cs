@@ -11,7 +11,7 @@ namespace Architect.BOA.BLL.Services
   // Fiyat değişiminde fiyatı takip eden sistemdeki kullanıcılara email atmak istiyoruz.
   // A Profili fiyat %2 oranında düşerse bildir
   // B Profili fiyat 3000 TL ve üstü düşerse bildir.
-  public class ProductPriceService
+  public class ProductPriceService:IProductPriceService
   {
     private readonly IProductRepository _productRepository;
     private readonly IMediator _mediator;

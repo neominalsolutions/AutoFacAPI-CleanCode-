@@ -36,7 +36,7 @@ namespace AutoFacAPI.Controllers
     }
 
     [HttpPut("priceChange/{id}")]
-    public async Task<IActionResult> ProductPriceChange(int id, [FromBody] PriceChangeProductDto dto)
+    public async Task<IActionResult> ProductPriceChange(Guid id, [FromBody] PriceChangeProductDto dto)
     {
       await _mediator.Send(new PriceChangeProductRequest(id,dto.newPrice));
 
