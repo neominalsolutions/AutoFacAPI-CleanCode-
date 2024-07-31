@@ -1,5 +1,4 @@
 ﻿using Architect.BOA.BLL;
-using AutoFacAPI.Features.Product.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

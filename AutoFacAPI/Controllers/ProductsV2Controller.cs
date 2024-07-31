@@ -1,7 +1,6 @@
-﻿using AutoFacAPI.Features.Product.Dtos;
-using AutoFacAPI.Features.Product.Request;
+﻿
+using Architecht.BOA.Application;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutoFacAPI.Controllers
@@ -21,7 +20,7 @@ namespace AutoFacAPI.Controllers
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateProductDto request)
     {
-       await _mediator.Send(request);
+      await _mediator.Send(request);
 
       return Created("/api/productsV2/1",request); // 201 Post istekleri eğer yeni bir kaynak oluşturuyor statusCode 201 olarak döndürmemiz lazım
     }

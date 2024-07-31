@@ -1,4 +1,4 @@
-﻿namespace AutoFacAPI.Features.Product.Dtos
+﻿namespace Architecht.BOA.Application
 {
   public record PriceChangeProductDto(decimal newPrice);
   

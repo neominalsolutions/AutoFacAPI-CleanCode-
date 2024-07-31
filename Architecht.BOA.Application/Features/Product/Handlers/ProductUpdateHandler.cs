@@ -1,6 +1,5 @@
 ﻿using Architecht.Autofac.Aspect.Core;
-using AutoFacAPI.Features.Product.Dtos;
-using AutoFacAPI.Features.Product.Request;
+using Architecht.BOA.Application;
 using MediatR;
 
 namespace AutoFacAPI.Features.Product.Handlers

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System.ComponentModel.DataAnnotations;
 
-namespace AutoFacAPI.Features.Product.Request
+namespace Architecht.BOA.Application
 {
   // Product Create den sorumlu bir Request
   public class CreateProductDto:IRequest

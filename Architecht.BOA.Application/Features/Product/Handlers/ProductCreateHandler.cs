@@ -1,8 +1,9 @@
 ﻿
-using AutoFacAPI.Features.Product.Request;
+using Architecht.BOA.Application;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
-namespace AutoFacAPI.Features.Product.Handlers
+namespace Architecht.BOA.Application
 {
   public class ProductCreateHandler : IRequestHandler<CreateProductDto>
   {

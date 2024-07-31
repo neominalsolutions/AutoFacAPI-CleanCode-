@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 
-namespace AutoFacAPI.Features.Product.Request
+namespace Architecht.BOA.Application
 {
   // Request Nesneleri Immutable olacağı için sadece Request aşamasında set ediliyor
   // Dtolar değer nesleri oldukları için Record tipleri, Record tipinde Id olmaz 

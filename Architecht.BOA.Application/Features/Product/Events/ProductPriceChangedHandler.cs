@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace AutoFacAPI.Features.Product.Events
+namespace Architecht.BOA.Application
 {
   public class ProductPriceChangedHandler : INotificationHandler<ProductPriceChanged>
   {
