@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Architect.BOA.BLL", "Archit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Architect.Autofac.Notification.Infra.Core", "Architect.Autofac.Notification.Infra.Core\Architect.Autofac.Notification.Infra.Core.csproj", "{07132B49-DAAE-4E23-BF67-AE4DCECFF9D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Architecht.BOA.Application", "Architecht.BOA.Application\Architecht.BOA.Application.csproj", "{16690654-0B75-4A9D-B6D8-B13B0085E227}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Architecht.BOA.Application", "Architecht.BOA.Application\Architecht.BOA.Application.csproj", "{16690654-0B75-4A9D-B6D8-B13B0085E227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Architecht.EF.Core", "Architecht.EF.Core\Architecht.EF.Core.csproj", "{6E449658-B0D8-4C86-9578-2735E97BF0E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Architecht.Domain.Core", "Architecht.Domain.Core\Architecht.Domain.Core.csproj", "{BB124EBF-EE60-4E7B-AC66-E15EF214F46F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Architecht.BOA.EF.Infrastructure", "Architecht.BOA.EF.Infrastructure\Architecht.BOA.EF.Infrastructure.csproj", "{0D13CC70-2FD3-45A9-857E-AF8287510E77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{16690654-0B75-4A9D-B6D8-B13B0085E227}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16690654-0B75-4A9D-B6D8-B13B0085E227}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16690654-0B75-4A9D-B6D8-B13B0085E227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E449658-B0D8-4C86-9578-2735E97BF0E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E449658-B0D8-4C86-9578-2735E97BF0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E449658-B0D8-4C86-9578-2735E97BF0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E449658-B0D8-4C86-9578-2735E97BF0E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB124EBF-EE60-4E7B-AC66-E15EF214F46F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB124EBF-EE60-4E7B-AC66-E15EF214F46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB124EBF-EE60-4E7B-AC66-E15EF214F46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB124EBF-EE60-4E7B-AC66-E15EF214F46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D13CC70-2FD3-45A9-857E-AF8287510E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D13CC70-2FD3-45A9-857E-AF8287510E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D13CC70-2FD3-45A9-857E-AF8287510E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D13CC70-2FD3-45A9-857E-AF8287510E77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

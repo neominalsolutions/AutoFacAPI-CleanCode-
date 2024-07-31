@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Architecht.BOA.Application
+namespace Architect.BOA.BLL
 {
   public class ProductPriceChangedHandler : INotificationHandler<ProductPriceChanged>
   {
